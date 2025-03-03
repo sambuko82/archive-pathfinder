@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { fileSystem, FileItem, FileData, calculateStatistics } from '@/utils/fileSystem';
+import MainNavigation from '@/components/MainNavigation';
 import Sidebar from '@/components/Sidebar';
 import FileExplorer from '@/components/FileExplorer';
 import FilePreview from '@/components/FilePreview';
@@ -55,14 +56,7 @@ const Index = () => {
   return (
     <div className="h-screen flex flex-col bg-white">
       {/* Header */}
-      <header className="bg-white border-b border-gray-100 py-4 px-6">
-        <div className="flex justify-between items-center">
-          <h1 className="text-xl font-medium text-gray-800">Java Volcano Tour Operator</h1>
-          <div className="flex items-center space-x-2">
-            <span className="text-sm text-gray-500">Archive Pathfinder</span>
-          </div>
-        </div>
-      </header>
+      <MainNavigation />
 
       {/* Main Content */}
       <div className="flex flex-1 overflow-hidden">
